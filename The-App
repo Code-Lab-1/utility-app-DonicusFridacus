@@ -1,0 +1,188 @@
+#Declaring of variables
+
+products = [ #Products to be used in the program
+    {
+        "ID": "A1",
+        "name": "Bottled Water",
+        "price": 1.00,
+    },
+    {
+        "ID": "A2",
+        "name": "NRG Drink",
+        "price": 5.00,
+    },
+    {
+        "ID": "A3",
+        "name": "Soda Pop",
+        "price": 2.50,
+    },
+    {
+        "ID": "B1",
+        "name": "Chips",
+        "price": 8.00,
+    },
+    {
+        "ID": "B2",
+        "name": "Choco Bar",
+        "price": 4.50,
+    },
+    {
+        "ID": "B3",
+        "name": "Sour Candy Strips",
+        "price": 6.00,
+    }
+]
+
+run = True #Declaring of Boolean variable
+
+import time #Importing time into the program
+
+#Functions that will run the code
+    
+def menu_inter(): #Function for the menu interface
+    
+    print("========*-VENDING PYMACHINE-*========\n")
+
+    for i in products:
+        print(f"= {i['ID']}# {i['name']} - ${i['price']}0\n")
+
+
+def input_inter(): #Function for handling the inputs of the program
+    
+    while run:
+        choice = input("Enter the product ID (e.g. A1) or Cancel: ")
+
+        match choice:
+            case "A1": #Bottled Water - $1.00
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 1:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 1:
+                    change = money - 1
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+                
+            case "A2": #NRG Drink - $5.00
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 5:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 5:
+                    change = money - 5
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+
+            case "A3": #Soda Pop - $2.50
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 2.50:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 2.50:
+                    change = money - 2.50
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+
+            case "B1": #Chips - $8.00
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 8:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 8:
+                    change = money - 8
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+
+            case "B2": #Choco Bar - $4.50
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 4.50:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 4.50:
+                    change = money - 4.50
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+
+            case "B3": #Sour Candy Strips - $6.00
+                money = float(input("\nInsert the amount required to purchase product: "))
+                if money == 6:
+                    disp()
+                    print("\n==Thank you for your purchase.==\n")
+                    break
+                elif money > 6:
+                    change = money - 6
+                    disp()
+                    print(f"\n==Your change is: ${change}0. Thank you for your purchase.==\n")
+                    break
+                else:
+                    print("\nInvalid amount.")
+            
+            case "Cancel":
+                print("\nLeaving the machine...\n")
+                time.sleep(3)
+                break
+            
+            case _:
+                print("\nEnter a valid product ID...\n")
+
+def restart_mach(): #Function for restarting or stopping the program
+    
+    while run:
+        menu_inter()
+
+        input_inter()
+    
+        res = input("Would you like to use Vending Pymachine? (Y or N): ")
+
+        match res:
+            case "Y":
+                print("\nRunning back to Vending Pymachine...\n")
+                time.sleep(3)
+        
+            case "N":
+                print("\nThank you again for using VENDING PYMACHINE by Jadon Aguhob!\n")
+                break
+
+            case _:
+                NY23()
+            
+def disp(): #Function for "dispensing" items from the machine
+
+    print("\nItem is being dispensed...\n")
+    time.sleep(1.5)
+    print("Take product...")
+
+def NY23(): #Happy New Year 2023!
+
+    NY23 = input("\n>>>Code: ")
+
+    if NY23 == "NY23":
+        print("\nHAPPY NEW YEAR 2023!!! Whoever see this I hope you have a great year!\n")
+        print("(You can find this only if you took a glance at the code)...\n")
+        exit()
+    else:
+        exit()
+
+#Calling of the Functions
+
+restart_mach()
