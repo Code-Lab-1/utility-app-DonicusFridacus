@@ -144,6 +144,23 @@ def input_inter(): #Function for handling the inputs of the program
             
             case _:
                 print("\nEnter a valid product ID...\n")
+          
+def disp(): #Function for "dispensing" items from the machine
+
+    print("\nItem is being dispensed...\n")
+    time.sleep(1.5)
+    print("Take product...")
+
+def NY23(): #Happy New Year 2023!
+
+    NY23 = input("\n>>>Code: ")
+
+    if NY23 == "NY23":
+        print("\nHAPPY NEW YEAR 2023!!! Whoever see this I hope you have a great year!\n")
+        print("(You can find this only if you took a glance at the code)...\n")
+        exit()
+    else:
+        exit()
 
 def restart_mach(): #Function for restarting or stopping the program
     
@@ -165,24 +182,6 @@ def restart_mach(): #Function for restarting or stopping the program
 
             case _:
                 NY23()
-            
-def disp(): #Function for "dispensing" items from the machine
-
-    print("\nItem is being dispensed...\n")
-    time.sleep(1.5)
-    print("Take product...")
-
-def NY23(): #Happy New Year 2023!
-
-    NY23 = input("\n>>>Code: ")
-
-    if NY23 == "NY23":
-        print("\nHAPPY NEW YEAR 2023!!! Whoever see this I hope you have a great year!\n")
-        print("(You can find this only if you took a glance at the code)...\n")
-        exit()
-    else:
-        exit()
-
 #Calling of the Functions
 
 restart_mach()
