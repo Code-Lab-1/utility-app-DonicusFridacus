@@ -182,6 +182,7 @@ def restart_mach(): #Function for restarting or stopping the program
 
             case _:
                 NY23()
+
 #Calling of the Functions
 
 restart_mach()
