@@ -156,7 +156,7 @@ def NY23(): #Happy New Year 2023!
     NY23 = input("\n>>>Code: ")
 
     if NY23 == "NY23":
-        print("\nHAPPY NEW YEAR 2023!!! Whoever see this I hope you have a great year!\n")
+        print("\nHAPPY NEW YEAR 2023!!! Whoever sees this I hope you have a great year!\n")
         print("(You can find this only if you took a glance at the code)...\n")
         exit()
     else:
